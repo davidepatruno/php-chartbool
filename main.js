@@ -32,8 +32,10 @@ function printPie(results){
     // console.log(fatturatoTotale);
     // console.log(datafromserver[venditore]);
   };
+  var typeofchart = $('.pie-chart').attr('data-json');
+  console.log(typeofchart);
   var myPieChart = new Chart($('.pie-chart'),{
-      type: 'pie',
+      type: typeofchart,
       data: {
         datasets: [{
             data: arrayAmmVendite,

@@ -22,4 +22,5 @@ $data_line = json_encode($graphs['fatturato']['data']);
 $type_line = $graphs['fatturato']['type'];
 
 $type_pie = $graphs['fatturato_by_agent']['type'];
+
 ?>

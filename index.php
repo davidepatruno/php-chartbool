@@ -10,11 +10,11 @@
   <body>
     <div class="container">
       <?php include 'database.php' ?>
-      <canvas class="line-chart" data-json="<?php echo $type_line ?>"></canvas>
+      <canvas class="line-chart" data-json="<?php echo $type_line; ?>"></canvas>
     </div>
 
     <div class="container">
-      <canvas class="pie-chart" data-json="<?php echo $type_pie ?>"></canvas>
+      <canvas class="pie-chart" data-json= "<?php echo $type_pie; ?>"></canvas>
     </div>
     <!--Milestone 1-->
     <!-- <script>
