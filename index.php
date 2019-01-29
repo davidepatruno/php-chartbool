@@ -9,14 +9,17 @@
   </head>
   <body>
     <div class="container">
-      <?php include 'database.php' ?>
-      <canvas class="line-chart" data-json="<?php echo $type_line; ?>"></canvas>
+      <canvas class="line-chart"></canvas>
     </div>
 
     <div class="container">
-      <canvas class="pie-chart" data-json= "<?php echo $type_pie; ?>"></canvas>
+      <canvas class="pie-chart"></canvas>
     </div>
-    <!--Milestone 1-->
+
+    <div class="container">
+      <canvas class="2lines-chart"></canvas>
+    </div>
+    <!--Milestone 1 con js compreso in php-->
     <!-- <script>
       <?php // include 'database.php' ?>;
       var months = ["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"];
@@ -43,7 +46,10 @@
         });
       </script> -->
 
-      <!--Milestone 2 -->
-      <script src="main.js"></script>
+
+      <!-- <script src="mainMS2.js"></script> -->
+
+      <script src="mainMS3.js"></script>
+
   </body>
 </html>
