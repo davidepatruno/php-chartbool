@@ -4,13 +4,24 @@ $(document).ready(function(){
     method : 'GET',
     success : function(answer)
     {
-        var results = JSON.parse(answer);
-
-        livello(results);
-        // printLine(results);
-        // printPie(results);
-        // print_2lines(results);
-
+      var level = $('#get_level').attr('data-json');
+        switch (level){
+          case "guest" :
+          var results = JSON.parse(answer);
+          printLine(results);
+          break;
+          case "employee" :
+          var results = JSON.parse(answer);
+            printLine(results);
+            printPie(results);
+          break;
+          case "clevel" :
+          var results = JSON.parse(answer);
+          printLine(results);
+          printPie(results);
+          print_2lines(results);
+          break;
+        };
     },
     error: function()
     {
@@ -104,26 +115,4 @@ function print_2lines(data){
         },
     });
   });
-};
-
-
-function livello(data){
-  var user_inputlvl = location.search;
-  for (var section in data){
-    var livello = "?level=" + data[section]['access'];
-    if (livello == user_inputlvl){
-      switch (user_inputlvl){
-        case "?level=guest" : printLine(data);
-        break;
-        case "?level=employee" :
-          printLine(data);
-          printPie(data);
-        break;
-        case "?level=clevel" :
-          printLine(data);
-          printPie(data);
-          print_2lines(data);
-      };
-    };
-  };
 };

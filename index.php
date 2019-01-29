@@ -8,6 +8,10 @@
     <title>php-chartbool</title>
   </head>
   <body>
+    <?php $level = $_GET['level'];?>
+    <div id="get_level" data-json="<?php echo $level ?>">
+
+    </div>
     <div class="container">
       <canvas class="line-chart"></canvas>
     </div>
