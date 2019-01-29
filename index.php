@@ -9,20 +9,21 @@
   </head>
   <body>
     <div class="container">
-      <canvas class="line-chart"</canvas>
+      <?php include 'database.php' ?>
+      <canvas class="line-chart" data-json="<?php echo $type_line ?>"></canvas>
     </div>
 
-
-    <script>
-      <?php include 'database.php'; ?>
+    <div class="container">
+      <canvas class="pie-chart" data-json="<?php echo $type_pie ?>"></canvas>
+    </div>
+    <!--Milestone 1-->
+    <!-- <script>
+      <?php // include 'database.php' ?>;
       var months = ["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"];
 
-      var data = [1000,1322,1123,2301,3288,988,502,2300,5332,2300,1233,2322];
+      var phpdatabase = "<?php // echo json_encode($database); ?>";
 
-      var phpdatabase = "<?php echo json_encode($database); ?>";
-
-      database = JSON.parse(phpdatabase);
-      console.log(data);
+      var database = JSON.parse(phpdatabase);
       console.log(database);
 
       $(document).ready(function(){
@@ -40,7 +41,9 @@
             },
           });
         });
-      </script>
+      </script> -->
 
+      <!--Milestone 2 -->
+      <script src="main.js"></script>
   </body>
 </html>
